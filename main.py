@@ -36,9 +36,6 @@ def create_order(e):
 
     document.getElementById("show").innerHTML = receipt
 
-    from pyscript import display, document
-
-
 def SKU_generator(e):
 
     category = ""
