@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <style>
+    @font-face {
+        font-family: "CurseCasual";
+        src: url("Curse Casual.ttf");
+    }
+
+    body {
+        background-image: url("Time_RIft.webp");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        color: white;
+        font-family: "CurseCasual", sans-serif;
+        text-align: center;
+    }
+
+    .description {
+        height: 80px;
+        background-color: #07152f;
+        margin-left: -15px;
+        margin-right: -15px;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .badge {
+        background-color: #1688e8;
+        border: 4px solid #eeeeee;
+        border-radius: 10px;
+        padding: 15px;
+        width: 100%;
+        height: 500px;
+        box-sizing: border-box;
+        background-color: #1688e8;
+        border: 4px solid #07152f;
+        box-shadow: 0px 0px 5px rgb(33, 2, 84);
+    }
+
+    .badge h2 {
+        background-color: #07152f;
+        margin-left: -15px;
+        margin-right: -15px;
+        font-size: 30px;
+    }
+
+    .price {
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        padding: 5px 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #f5e504;
+        height: 40px;
+        background-color: #1b1b1b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #0f0f0f;
+    }
+
+    button {
+        background-color: #e62b45;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .badge img {
+        width: 150px;
+        height: 150px;
+        object-fit: contain;
+    }   
+
+    button:hover {
+        background-color: #ff5268;
+    }
+
+    .purchase {
+        width: 250px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .purchase button {
+        margin-bottom: 10px;
+        width: 250px;
+    }
+
+    #show {
+        background-color: #eeeeee;
+        color: black;
+        width: 250px;
+        height: 300px;
+        margin: 20px auto;
+        padding: 15px;
+        box-sizing: border-box;
+        border-radius: 8px;
+        font-size: 25px;
+    }
+
+    .price img {
+        width: 25px;
+        height: 25px;
+        vertical-align: middle;
+        margin-right: 5px;
+        margin-bottom: 1px;
+    }   
+
+    input {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+    }
+
+    .shop {
+        display: grid;
+        grid-template-columns: 250px 250px;
+        grid-auto-rows: 500px;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .shop-container {
+        background-color: #e6de4f;
+        padding: 4px;
+        width: 45%;
+        margin: 0 auto;
+        border-radius: 15px;
+        border: 2px solid #eefaaa;
+        box-shadow: 0px 0px 15px rgb(239, 255, 135);
+    }
+
+    .shop-container2 {
+        background-color: #372243;
+        padding: 15px;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 10px;
+        border: 3px solid #eefaaa;
+        box-shadow: 0px 0px 10px rgb(239, 255, 135);
+    }
+
+    .time-rift {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(10px);
+        z-index: -1;
+    }
+    </style>
+
+</head>
+<body>
+
+    <img src="Time_Rift.webp" class="time-rift">
+
+<div class="shop-container">        
+    <div class="shop-container2">
+        <div class="shop">
+
+            <div class="badge">
+                <img src="Item_Magnet_Badge.webp" alt="Item Magnet">
+                <h2>ITEM MAGNET BADGE</h2>
+                <p class="description">Automatically attract <br> nearby collectibles!</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 50 PONS</p>
+                <label>
+                    <input type="checkbox" id="item1" value="50">
+                </label>
+            </div>
+
+            <div class="badge">
+                <img src="Hover_Badge.webp" alt="Item Magnet">
+                <h2>HOVER BADGE</h2>
+                <p class="description">Automatically pull out your umbrella before deadly impact!</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 100 PONS</p>
+                <label>
+                    <input type="checkbox" id="item2" value="100">
+                </label>
+            </div>
+                
+            <div class="badge">
+                <img src="No_Bonk_Badge.webp" alt="Item Magnet">
+                <h2>NO BONK BADGE</h2>
+                <p class="description">No more bonking against walls when diving!</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 150 PONS</p>
+                <label>
+                    <input type="checkbox" id="item3" value="150">
+                </label>
+            </div>
+
+            <div class="badge">
+                <img src="Scooter_Badge.webp" alt="Item Magnet">
+                <h2>SCOOTER BADGE</h2>
+                <p class="description">Upgrades your Sprint Hat<br> to a scooter!</p>
+                <p class="price"><img src="Miscpon.webp" alt="Item Magnet"> 200 PONS</p>
+                <label>
+                    <input type="checkbox" id="item4" value="200">
+                </label>
+            </div>
+
+            <div class="badge">
+                <img src="Fast_Hatter_Badge.webp" alt="Item Magnet">
+                <h2>FAST HATTER BADGE</h2>
+                <p class="description">Significantly reduce the cooldown when using hats!</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 250 PONS</p>
+                <label>
+                    <input type="checkbox" id="item5" value="250">
+                </label>
+            </div>
+                
+            <div class="badge">
+                <img src="Projectile_Badge.webp" alt="Item Magnet">
+                <h2>PROJECTILE BADGE</h2>
+                <p class="description">Hold and release your attack button for a beam attack!</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 300 PONS</p>
+                <label>
+                    <input type="checkbox" id="item6" value="300">
+                </label>
+            </div>
+
+            <div class="badge">
+                <img src="Compass_Badge.webp" alt="Item Magnet">
+                <h2>COMPASS BADGE</h2>
+                <p class="description">Shows a map <br>towards nearby relics!</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 400 PONS</p>
+                <label>
+                    <input type="checkbox" id="item7" value="400">
+                </label>
+            </div>
+
+            <div class="badge">
+                <img src="1-Hit_Hero_Badge.webp" alt="Item Magnet">
+                <h2>1 HIT HERO BADGE</h2>
+                <p class="description">You die in one hit. <br>(Only for the brave!)</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 500 PONS</p>
+                <label>
+                    <input type="checkbox" id="item8" value="500">
+                </label>
+            </div>
+
+            <div class="badge">
+                <img src="Mumble_Badge.webp" alt="Item Magnet">
+                <h2>MUMBLE BADGE</h2>
+                <p class="description">Plugs your ears, now you only hear vague mumbling!</p>
+                <p class="price"> <img src="Miscpon.webp" alt="Item Magnet"> 800 PONS</p>
+                <label>
+                    <input type="checkbox" id="item9" value="800">
+                </label>
+            </div>
+
+            <div class="purchase">
+                <button py-click="create_order">PURCHASE</button>
+                <div id="show"></div>
+            </div>
+
+        </div>
+    </div>
+</div>    
+
+<script type="py" src="main.py"></script>
+
+</body>
+</html>
